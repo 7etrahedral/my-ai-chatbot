@@ -60,3 +60,14 @@ pnpm dev
 ```
 
 Your app template should now be running on [localhost:3000](http://localhost:3000).
+
+```bash
+npx prisma migrate dev
+
+docker run --name local-postgres
+  -e POSTGRES_USER=admin \
+  -e POSTGRES_PASSWORD=secret \
+  -e POSTGRES_DB=mydb \
+  -p 5432:5432 \
+  -d postgres
+```
